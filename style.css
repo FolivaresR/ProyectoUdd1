@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background: #1509c2;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    margin-left: 5px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #000090;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.jumbotron{
+    background:linear-gradient(0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    ),url(asset/media/fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+    color:white;
+    font-size: 30px;
+    font-weight: bold;
+}
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+}
+.display4 .jumbotron{
+    display: flex;
+
+}
+
+
+#blog .container{
+    display: flex; 
+    justify-items: center;
+    align-items: center;
+}
+h2{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color:white;
+}
+h3{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+#blog{
+    background:linear-gradient(0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    ),url(asset/media/feliznavidad.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:auto
+}
+
+.container .card{
+    width: 330px;
+    height: 433px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
+}
+footer .container{
+    width: auto;
+    height: auto;
+}
+.card-body{
+    font-weight: bold;
+}
+
+@media (max-width: 820px)
+{
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .card-body{
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+
+@media (max-width: 720px){
+    .checkbtn{
+        display: block;
+        list-style-position: inside;
+    }
+    .logo{
+        display: none;
+    }
+    ul{
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 30px;
+        left: -60%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+@media (max-width: 420px){
+    .checkbtn{
+        display: block;
+        list-style-position: inside;
+    }
+    .logo{
+        display: none;
+    }
+    ul{
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 30px;
+        left: -60%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+h2 {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+.container .card{
+
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    width: 80px;
+    height: 10px;
+    border-radius: 5px;
+    margin: 2px;
+    text-align: center;
+    transition: all 0.25s;
+
+}
+}
